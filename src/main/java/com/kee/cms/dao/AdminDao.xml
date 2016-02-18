@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- Changsha kee Network Technology Co., Ltd. All rights reserved. -->
+<!-- 长沙市师说网络科技有限公司 版权所有 -->
+<!-- http://www.kee.com -->
+
+<mapper namespace="com.kee.cms.dao.AdminDao">
+
+	<!-- ############################## -->
+	<!-- ###### 增加 ###### -->
+	<!-- ############################## -->
+
+	<insert id="addAdmin" parameterType="com.kee.cms.entity.Admin">
+		insert into
+		admin(email,name,password,status,createTime)
+		value(#{email},#{name},#{password},#{status},#{createTime})
+		<selectKey resultType="long" keyProperty="adminId">
+			SELECT
+			LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+
+	<!-- ############################## -->
+	<!-- ###### 删除 ###### -->
+	<!-- ############################## -->
+
+	<delete id="deleteAdmin" parameterType="long">
+		delete from admin where
+		adminId=#{adminId}
+	</delete>
+
+	<!-- ############################## -->
+	<!-- ###### 修改 ###### -->
+	<!-- ############################## -->
+
+	<update id="updateAdmin" parameterType="com.kee.cms.entity.Admin">
+		update admin set
+		name=#{name},password=#{password},status=#{status},createTime=#{createTime}
+		where adminId=#{adminId}
+	</update>
+
+	<update id="updateAdminByadminId">
+		update admin set name=#{name},password=#{password}
+		where adminId=#{adminId}
+	</update>
+	<!-- ############################## -->
+	<!-- ###### 查询 ###### -->
+	<!-- ############################## -->
+
+	<select id="getAllList" resultType="com.kee.cms.entity.Admin">
+		select * from admin limit
+		#{offset},#{rows}
+	</select>
+
+	<select id="getAllListCount" resultType="int">
+		select count(*) from
+		admin
+	</select>
+
+	<select id="getAdminById" parameterType="long"
+		resultType="com.kee.cms.entity.Admin">
+		select * from admin where adminId=#{adminId}
+	</select>
+
+	<select id="getAdminByEmail" resultType="com.kee.cms.entity.vo.AdminVo">
+		select * from admin
+		where email=#{email}
+	</select>
+
+</mapper>  

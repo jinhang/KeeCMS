@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- Changsha kee Network Technology Co., Ltd. All rights reserved. -->
+<!-- 长沙市师说网络科技有限公司 版权所有 -->
+<!-- http://www.kee.com -->
+
+<mapper namespace="com.kee.cms.dao.UserDao">
+
+	<!-- ############################## -->
+	<!-- ######        增加                      ###### -->
+	<!-- ############################## -->
+	
+	<insert id="addUser" parameterType="com.kee.cms.entity.User">
+		insert into
+		user(openId,type,name,createTime)
+		value(#{openId},#{type},#{name},#{createTime})
+		<selectKey resultType="long" keyProperty="userId">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+
+	<!-- ############################## -->
+	<!-- ######       删除                         ###### -->
+	<!-- ############################## -->
+		
+	<delete id="deleteUserById" parameterType="long">
+		delete from user where userId=#{userId}
+	</delete>
+	
+	<!-- ############################## -->
+	<!-- ######       修改                         ###### -->
+	<!-- ############################## -->
+	
+	<update id="updateUser" parameterType="com.kee.cms.entity.User">
+		update user set openId=#{openId},type=#{type},name=#{name},createTime=#{createTime}
+	</update>
+	
+	<!-- ############################## -->
+	<!-- ######       查询                         ###### -->
+	<!-- ############################## -->
+	
+	<select id="getUserById" 
+		resultType="com.kee.cms.entity.User">
+		select * from user where userId=#{userId}
+	</select>
+	
+	<select id="getUserList"
+		resultType="com.kee.cms.entity.User">
+		select * from user limit #{offset}, #{rows}
+	</select>
+	
+	<select id="getUserListCount"
+		resultType="Integer">
+		select count(*) from user
+	</select>
+	
+</mapper>  

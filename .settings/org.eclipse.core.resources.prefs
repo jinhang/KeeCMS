@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/main/resources/log4j.properties=UTF-8
+encoding//src/main/resources/keecms.properties=UTF-8
+encoding//src/main/webapp/foo.html=UTF-8
+encoding//src/main/webapp/system/assets/ueditor1/dialogs/attachment/attachment.html=UTF-8
+encoding//src/main/webapp/themes/byvision/assets/css/style.css=UTF-8
+encoding//src/main/webapp/themes/cms/css/style.css=UTF-8
+encoding//src/main/webapp/themes/dd/assets/css/style.css=UTF-8
+encoding//src/test/java=UTF-8
+encoding/<project>=UTF-8
+separateDerivedEncodings=true

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- Changsha kee Network Technology Co., Ltd. All rights reserved. -->
+<!-- 长沙市师说网络科技有限公司 版权所有 -->
+<!-- http://www.kee.com -->
+
+<mapper namespace="com.kee.cms.dao.CommentDao">
+
+	<!-- ############################## -->
+	<!-- ######        增加                      ###### -->
+	<!-- ############################## -->
+	
+	<insert id="addComment" parameterType="com.kee.cms.entity.Comment">
+		insert into `comment`
+		(kind,email,name,content,ip,fatherId,status,createTime,userId,kindId,phone,url)
+		values
+		(#{kind},#{email},#{name},#{content},#{ip},#{fatherId},#{status},#{createTime},#{userId},#{kindId},#{phone},#{url})
+		<selectKey resultType="long" keyProperty="commentId">
+			SELECT
+			LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+
+	<!-- ############################## -->
+	<!-- ######       修改                         ###### -->
+	<!-- ############################## -->
+		
+	<update id="updateCommentStatus" parameterType="com.kee.cms.entity.Comment">
+		update `comment`
+		set status=#{status} where commentId=#{commentId}
+	</update>
+
+	<!-- ############################## -->
+	<!-- ######       查询                         ###### -->
+	<!-- ############################## -->
+		
+	<select id="getCommentListByFatherId" parameterType="long"
+		resultType="com.kee.cms.entity.vo.CommentVo">
+		select * from `comment` where kindId = #{kindId} and
+		fatherId = #{fatherId} and status=#{status} and kind=#{kind} order by createTime desc
+	</select>
+
+	<select id="getCommentCountByFatherId" resultType="Integer">
+		select
+		count(*) from
+		`comment` where kindId = #{kindId} and kind=#{kind} and
+		fatherId =
+		#{fatherId} and status=#{status}
+	</select>
+
+	<select id="getCommentById" parameterType="long"
+		resultType="com.kee.cms.entity.Comment">
+		select * from `comment` where commentId=#{commentId}
+	</select>
+
+	<select id="getAllList" parameterType="long"
+		resultType="com.kee.cms.entity.vo.CommentVo">
+		select * from `comment` order by createTime desc limit #{offset},#{rows} 
+	</select>
+
+	<select id="getAllListCount" resultType="Integer">
+		select count(*) from
+		`comment`
+	</select>
+
+	<select id="getCommentByStatus" resultType="com.kee.cms.entity.vo.CommentVo">
+		select * from
+		`comment` where status=#{status} limit #{offset},#{rows}
+	</select>
+
+	<select id="getCommentByStatusCount" resultType="Integer">
+		select count(*)
+		from `comment` where status=#{status}
+	</select>
+</mapper>  
