@@ -23,6 +23,8 @@
 * MySQL
 * FreeMarker
 * Lucene
+
+
 ## 安装
 >	# 进入CMS目录
 
@@ -38,6 +40,7 @@
 
 >	# 修改数据库配置文件
 >		1、 把 src/main/resources/keecms.properties 拷贝到 CMS目录下
+
 >		2、 修改keecms.properties里的数据库信息
 
 >	# 安装
