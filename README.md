@@ -25,21 +25,31 @@
 * Lucene
 ## 安装
 >	# 进入CMS目录
+
 >	cd CMS
+
 >	# 清理
+
 >	mvn clean
+
 >	# 编译
+
 >	mvn compile
+
 >	# 修改数据库配置文件
 >		1、 把 src/main/resources/keecms.properties 拷贝到 CMS目录下
 >		2、 修改keecms.properties里的数据库信息
+
 >	# 安装
+
 >	mvn exec:java -Dexec.mainClass="com.kee.cms.Install"
 >	# 运行
+
 >	mvn jetty:run
+
 >	# 后台地址
+
 >	http://127.0.0.1:8080/auth/admin/login.htm
+
 >	登录邮箱：***@***.com
 >	登录密码：***
->
->
