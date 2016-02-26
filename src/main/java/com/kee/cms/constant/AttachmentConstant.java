@@ -1,25 +1,18 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.constant;
 
 /**
  * 附件
- * 
- * @author Herbert
- * 
+ * @author keehang
+ * @version 1.0
  */
 public class AttachmentConstant {
 
 	/**
-	 * 类型<br>
-	 * photo：照片<br>
-	 * file：文件<br>
+	 * 类型
+	 * photo相册
+	 * file文件
 	 * 
-	 * @author Herbert
+	 * @author keehang
 	 * 
 	 */
 	public static enum Type {
@@ -35,7 +28,7 @@ public class AttachmentConstant {
 	/**
 	 * 种类
 	 * 
-	 * @author Herbert
+	 * @author keehang
 	 * 
 	 */
 	public static enum Kind {

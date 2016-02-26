@@ -1,8 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
 
 package com.kee.cms.service;
 
@@ -23,7 +18,7 @@ import com.kee.cms.exception.TemplateNotFoundException;
 /**
  * 模板工具类
  * 
- * @author Herbert
+ * @author keehang
  * 
  */
 @Service
@@ -143,7 +138,4 @@ public class TemplateService {
 		}
 	}
 
-	// ///////////////////////////////
-	// ///// 查詢 ////////
-	// ///////////////////////////////
 }

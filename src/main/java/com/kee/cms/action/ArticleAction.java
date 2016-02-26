@@ -1,11 +1,4 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.action;
-
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -20,10 +13,10 @@ import com.kee.cms.entity.Folder;
 import com.kee.cms.exception.ArticleNotFoundException;
 import com.kee.cms.exception.FolderNotFoundException;
 import com.kee.cms.exception.TemplateNotFoundException;
-
 /**
- * @author Herbert
- * 
+ * 文件操作
+ * @author keehang
+ *
  */
 @Controller
 public class ArticleAction extends BaseAction {

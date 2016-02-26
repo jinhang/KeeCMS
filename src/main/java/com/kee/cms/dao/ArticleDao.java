@@ -1,9 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.dao;
 
 import java.util.List;
@@ -18,15 +12,11 @@ import com.kee.cms.entity.vo.ArticleVo;
 /**
  * 文件服务
  * 
- * @author Harbored
+ * @author keehang
  * 
  */
 @Repository
 public interface ArticleDao {
-
-	// ///////////////////////////////
-	// ///// 增加 ////////
-	// ///////////////////////////////
 
 	/**
 	 * 增加文件
@@ -38,10 +28,6 @@ public interface ArticleDao {
 	public int deleteArticleListByStatus(
 			@Param("status") ArticleConstant.Status status);
 
-	// ///////////////////////////////
-	// ///// 刪除 ////////
-	// ///////////////////////////////
-
 	/**
 	 * 删除文件
 	 * 
@@ -49,9 +35,6 @@ public interface ArticleDao {
 	 */
 	public boolean deleteArticle(@Param("articleId") long articleId);
 
-	// ///////////////////////////////
-	// ///// 修改 ////////
-	// ///////////////////////////////
 
 	/**
 	 * 修改文件

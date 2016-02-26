@@ -1,11 +1,4 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.action;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,11 +6,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.kee.cms.exception.TemplateNotFoundException;
-
 /**
- * 首页
- * 
- * @author Herbert
+ * 首页/404/500处理页
+ * @author keehang
+ *
  */
 @Controller
 public class IndexAction extends BaseAction {

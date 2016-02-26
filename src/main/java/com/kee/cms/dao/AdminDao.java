@@ -1,8 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
 package com.kee.cms.dao;
 
 import java.util.List;
@@ -16,16 +11,11 @@ import com.kee.cms.entity.vo.AdminVo;
 /**
  * 管理员
  * 
- * @author Zhangjiale
+ * @author keehang
  */
 
 @Repository
 public interface AdminDao {
-
-	// ///////////////////////////////
-	// ///// 增加 ////////
-	// ///////////////////////////////
-
 	/**
 	 * 添加管理员
 	 * 
@@ -34,11 +24,6 @@ public interface AdminDao {
 	 * 
 	 */
 	public int addAdmin(Admin admin);
-
-	// ///////////////////////////////
-	// ///// 刪除 ////////
-	// ///////////////////////////////
-
 	/**
 	 * 删除管理员
 	 * 
@@ -48,9 +33,6 @@ public interface AdminDao {
 	 */
 	public int deleteAdmin(@Param("adminId") long adminId);
 
-	// ///////////////////////////////
-	// ///// 修改 ////////
-	// ///////////////////////////////
 
 	/**
 	 * 修改管理员的信息
@@ -70,10 +52,6 @@ public interface AdminDao {
 	 * 
 	 */
 	public int updateAdmin(Admin admin);
-
-	// ///////////////////////////////
-	// ///// 查詢 ////////
-	// ///////////////////////////////
 
 	/**
 	 * 获取所有管理员列表

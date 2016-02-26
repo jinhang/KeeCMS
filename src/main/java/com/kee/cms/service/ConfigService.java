@@ -1,9 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.service;
 
 import java.util.Date;
@@ -19,7 +13,7 @@ import com.kee.cms.entity.Config;
 /**
  * 网站配置
  * 
- * @author Zhangjiale
+ * @author keehang
  * 
  */
 @Service
@@ -27,10 +21,6 @@ public class ConfigService {
 
 	@Autowired
 	private ConfigDao configDao;
-
-	// ///////////////////////////////
-	// ///// 增加 ////////
-	// ///////////////////////////////
 
 	/**
 	 * 增加配置
@@ -48,10 +38,6 @@ public class ConfigService {
 		return config;
 	}
 
-	// ///////////////////////////////
-	// ///// 刪除 ////////
-	// ///////////////////////////////
-
 	/**
 	 * 删除配置
 	 * 
@@ -62,11 +48,6 @@ public class ConfigService {
 	public int deleteConfigByKey(String key) {
 		return configDao.deleteConfig(key);
 	}
-
-	// ///////////////////////////////
-	// ///// 修改 ////////
-	// ///////////////////////////////
-
 	/**
 	 * 更新配置
 	 * 
@@ -81,7 +62,6 @@ public class ConfigService {
 		this.getConfigByKey(key);
 		return config;
 	}
-
 	/**
 	 * @param key
 	 * @return

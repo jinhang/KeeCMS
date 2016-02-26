@@ -1,9 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.service;
 
 import java.util.ArrayList;
@@ -26,7 +20,7 @@ import com.kee.cms.exception.FolderNotFoundException;
 /**
  * 目录服务
  * 
- * @author Zhangjiale
+ * @author keehang
  * 
  */
 @Service
@@ -36,11 +30,6 @@ public class FolderService {
 
 	@Autowired
 	private FolderDao folderDao;
-
-	// ///////////////////////////////
-	// ///// 增加 ////////
-	// ///////////////////////////////
-
 	/**
 	 * 增加目录
 	 * 
@@ -87,11 +76,6 @@ public class FolderService {
 		}
 		return folder;
 	}
-
-	// ///////////////////////////////
-	// ///// 刪除 ////////
-	// ///////////////////////////////
-
 	/**
 	 * 删除目录
 	 * 
@@ -102,11 +86,6 @@ public class FolderService {
 	public boolean deleteFolderById(long folderId) {
 		return folderDao.deleteFolder(folderId);
 	}
-
-	// ///////////////////////////////
-	// ///// 修改 ////////
-	// ///////////////////////////////
-
 	/**
 	 * 更新目录
 	 * 

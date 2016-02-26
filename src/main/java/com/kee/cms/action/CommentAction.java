@@ -1,8 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
 package com.kee.cms.action;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,10 +18,10 @@ import com.kee.cms.exception.ValidateException;
 import com.kee.cms.service.ArticleService;
 import com.kee.cms.service.CommentService;
 import com.kee.cms.util.HttpUtils;
-
 /**
- * @author Herbert
- * 
+ * 上传操作
+ * @author keehang
+ *
  */
 @Controller
 @RequestMapping("/comment")

@@ -1,9 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.dao;
 
 import java.util.List;
@@ -15,13 +9,10 @@ import com.kee.cms.constant.AttachmentConstant;
 import com.kee.cms.constant.AttachmentConstant.Status;
 import com.kee.cms.entity.Attachment;
 import com.kee.cms.entity.vo.AttachmentVo;
-
 @Repository
 public interface AttachmentDao {
 
-	// ///////////////////////////////
-	// ///// 增加 ////////
-	// ///////////////////////////////
+	
 
 	/**
 	 * @param att
@@ -29,9 +20,6 @@ public interface AttachmentDao {
 	 */
 	public int addAttachment(Attachment att);
 
-	// ///////////////////////////////
-	// ///// 删除 ////////
-	// ///////////////////////////////
 
 	/**
 	 * @param attachmentId
@@ -39,9 +27,7 @@ public interface AttachmentDao {
 	 */
 	public int deleteAttachment(@Param("attachmentId") long attachmentId);
 
-	// ///////////////////////////////
-	// ///// 修改////////
-	// ///////////////////////////////
+
 
 	/**
 	 * @param attachmentId
@@ -54,9 +40,7 @@ public interface AttachmentDao {
 	public int updateLinkByAttachmentId(
 			@Param("attachmentId") long attachmentId, @Param("link") String link);
 
-	// ///////////////////////////////
-	// ///// 查询////////
-	// ///////////////////////////////
+	
 
 	/**
 	 * @param attachmentId

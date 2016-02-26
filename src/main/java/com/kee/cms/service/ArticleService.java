@@ -1,8 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
 
 package com.kee.cms.service;
 
@@ -33,7 +28,7 @@ import com.kee.cms.exception.FolderNotFoundException;
  * 
  * 文章服务
  * 
- * @author Zhangjiale
+ * @author keehang
  * 
  */
 @Service
@@ -92,9 +87,7 @@ public class ArticleService {
 		return articleDao.getArticleById(article.getArticleId());
 	}
 
-	// ///////////////////////////////
-	// ///// 刪除 ////////
-	// ///////////////////////////////
+
 
 	/**
 	 * 删除文件
@@ -110,10 +103,6 @@ public class ArticleService {
 	public int deleteArticleListByStatus(ArticleConstant.Status status) {
 		return articleDao.deleteArticleListByStatus(status);
 	}
-
-	// ///////////////////////////////
-	// ///// 修改 ////////
-	// ///////////////////////////////
 
 	/**
 	 * 修改文件

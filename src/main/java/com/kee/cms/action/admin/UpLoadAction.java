@@ -1,9 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.action.admin;
 
 import java.io.File;
@@ -17,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
-
 /**
- * 文件上传
- * 
+ * 文件上传操作
+ * @author keehang
+ * @version 1.0
  */
 @Controller
 @RequestMapping("/admin")

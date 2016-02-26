@@ -1,8 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
 
 package com.kee.cms.service;
 
@@ -27,7 +22,7 @@ import com.kee.cms.util.AuthUtils;
 /**
  * 管理员
  * 
- * @author Administrator
+ * @author keehang
  * 
  */
 @Service
@@ -35,10 +30,6 @@ public class AdminService {
 
 	@Autowired
 	private AdminDao adminDao;
-
-	// ///////////////////////////////
-	// ///// 增加 ////////
-	// ///////////////////////////////
 
 	/**
 	 * 添加管理员
@@ -61,11 +52,7 @@ public class AdminService {
 		return admin;
 	}
 
-	// ///////////////////////////////
-	// ///// 刪除 ////////
-	// ///////////////////////////////
-
-	/**
+		/**
 	 * 删除管理员
 	 * 
 	 * @param adminId
@@ -75,9 +62,7 @@ public class AdminService {
 		return adminDao.deleteAdmin(adminId);
 	}
 
-	// ///////////////////////////////
-	// ///// 修改 ////////
-	// ///////////////////////////////
+
 
 	/**
 	 * 修改管理员资料
@@ -110,9 +95,6 @@ public class AdminService {
 		adminDao.updateAdminByadminId(adminId, name, pwd);
 	}
 
-	// ///////////////////////////////
-	// ///// 查詢 ////////
-	// ///////////////////////////////
 
 	/**
 	 * 管理员登陆

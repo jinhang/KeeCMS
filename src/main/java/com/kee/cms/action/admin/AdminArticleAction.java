@@ -1,9 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.action.admin;
 
 import java.io.IOException;
@@ -32,10 +26,10 @@ import com.kee.cms.entity.vo.PageVo;
 import com.kee.cms.exception.ArticleNotFoundException;
 import com.kee.cms.exception.FolderNotFoundException;
 import com.kee.cms.util.HttpUtils;
-
 /**
- * @author 文件action
- * 
+ * 文件操作
+ * @author keehang
+ * @version 1.0
  */
 @Controller
 @RequestMapping("/admin/article")

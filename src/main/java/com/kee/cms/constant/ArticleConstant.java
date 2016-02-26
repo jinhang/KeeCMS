@@ -1,23 +1,16 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.constant;
 
 /**
  * 文件常量
- * 
- * @author Zhang jiale
- * 
+ * @author keehang
+ * @version 1.0
  */
 public class ArticleConstant {
 
 	/**
 	 * 是否拥护配图
 	 * 
-	 * @author Herbert
+	 * @author keehang
 	 * 
 	 */
 	public static enum Picture {
@@ -27,7 +20,7 @@ public class ArticleConstant {
 	/**
 	 * 文件状态
 	 * 
-	 * @author Herbert
+	 * @author keehang
 	 * 
 	 */
 	public static enum Status {
@@ -49,7 +42,7 @@ public class ArticleConstant {
 	};
 
 	/**
-	 * @author Herbert
+	 * @author keehang
 	 * 
 	 */
 	public static enum Owner {

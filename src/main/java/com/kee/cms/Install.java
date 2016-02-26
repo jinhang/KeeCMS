@@ -1,8 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
 package com.kee.cms;
 
 import java.io.BufferedInputStream;
@@ -19,16 +14,14 @@ import com.mysql.jdbc.Connection;
 
 /**
  * 
- * 师说CMS安装程序 如果出现乱码请在控制台运行 <br>
- * Windows: set MAVEN_OPTS=-Dfile.encoding=UTF-8<br>
- * Linux: export MAVEN_OPTS=-Dfile.encoding=UTF-8
- * 
- * @author Herbert
+ * 自动安装修改乱码 
+ * @author keehang
  * 
  */
 public class Install {
-	private static String CMS_PROPERTIES = "keecms.properties";
+	private static String CMS_PROPERTIES = "cms.properties";
 	private static String CMS_INSTALL_SQL = "sql/install.sql";
+	private static int INSTALLCOUNT = 3;
 
 	Console console = System.console();
 
@@ -36,7 +29,7 @@ public class Install {
 
 		Install install = new Install();
 		install.welcome();
-		for (int i = 1; i <= 10; i++) {
+		for (int i = 1; i <= INSTALLCOUNT; i++) {
 			if (install.importData()) {
 				System.out.println("\n\n安装成功，使用 mvn jetty:run 运行系统。\n\n");
 				break;
@@ -46,59 +39,11 @@ public class Install {
 			}
 		}
 	}
-
 	/**
-	 * 
+	 * 读取系统环境信息
 	 */
-	private void welcome() {
-		System.out
-				.println("                                                                                ");
-		System.out
-				.println("          7                                                                     ");
-		System.out
-				.println("          ,,       7,,,,,,,,,,,,,,,,,,    ,=,,,,,,,      ,, 7       ,,,         ");
-		System.out
-				.println("    ,,   ,,,7  ,,,,,,,,,,,,,,,,,,,,,, 7  ,,,,,,,,,,,,  I,,,,,      ,,,,         ");
-		System.out
-				.println("  ,,,,,  ,,,  ?,,,,,,,,=II?,,,,,,,,,    7,,,,,,,,,,, 7   ,,,,     ,,,,          ");
-		System.out
-				.println("  ,,,,,   ,,   =+      7,,7                7,,,I         7,,,  7?,,+    7       ");
-		System.out
-				.println("  :,,,,   ,,        7  ,,,,                             I ,,,,,,,,,,,,,,,       ");
-		System.out
-				.println("  7,,,    ,,    77,,,,,,,,,,,,,,,,,,    7I,,,,,,,,7 7,,,,,,,,,,,,,,,,,,,,       ");
-		System.out
-				.println("  7,,,    ,,   ,,,,,,,,,,,,,,,,,,,,,   ,,,,,,,,,,,   ,,,,,,+        ,,,, 7      ");
-		System.out
-				.println("   =,,    ,,   ,,,,,,,,,,,,=   =,,,    ,,,,,,,,,,     ,,,?7        ,,,:         ");
-		System.out
-				.println("   ,,,    ,,    ,,,     ,,=     ,,,7    ,,,7 ,,,=    7,,,,,,,,,,,,,,,,          ");
-		System.out
-				.println("  7,,,    ,,    ,,,     ,,I     ,,,          ,,,     ,,,,,,,,,,,,,,,            ");
-		System.out
-				.println("   ,,,   +,,    ,,,    7,,?     ,,,          ,,,     ,,, 7    ,,,7              ");
-		System.out
-				.println("   ,,,   ,,,   ~,,?     ,,,     ,,,         ,,,,         ,,   ,,,               ");
-		System.out
-				.println("    ,7   ,,    ,,,     ~,,,     7,,=       7,,,? 7,,    ,,7   ,,                ");
-		System.out
-				.println("        ,,,    ,,,     ,,,,      ,,=       ,,,,,,,,7   ,,,   ,,,                ");
-		System.out
-				.println("     7,,,,,    ,,,     ,,,,      ,,7      ,,,,,,,~    ,,,    ,,,=         7 ,,  ");
-		System.out
-				.println("  ,,,,,,,,7      7     ,,,,             7,,,,,,,7   7,,,     ,,,,,,,~I I:,,,,=  ");
-		System.out
-				.println(" ,,,,,,,,7             ,,,,             ,,,,,      +,,,     I,,,,,,,,,,,,,,,,   ");
-		System.out
-				.println("  7?,,I                ,,,,             ,,,7       ,,,       ,,,,,,,,,,,,,,,,   ");
-		System.out
-				.println("                       777                                       7 ,,,,,,,,,    ");
-		System.out
-				.println("                                                                        7       ");
+	private void welcome() {                                              
 		Properties props = System.getProperties();
-		System.out.println("\n\n欢迎使用【师说CMS】\n\n");
-		System.out.println("Windows: set MAVEN_OPTS=-Dfile.encoding=UTF-8");
-		System.out.println("Linux: export MAVEN_OPTS=-Dfile.encoding=UTF-8");
 		System.out.println("操作系统的名称\t\t" + props.getProperty("os.name"));
 		System.out.println("操作系统的架构\t\t" + props.getProperty("os.arch"));
 		System.out.println("操作系统的版本\t\t" + props.getProperty("os.version"));
@@ -111,12 +56,12 @@ public class Install {
 				.println("Java虚拟机供应商\t" + props.getProperty("java.vm.vendor"));
 		System.out.println("Java虚拟机名称\t\t" + props.getProperty("java.vm.name"));
 
-		System.out.println("\n\n【重要】在开始前，您需要配置 " + CMS_PROPERTIES
-				+ "，此文件包含数据连接的相关信息。");
+		System.out.println("\n\n开始前，需要配置 " + CMS_PROPERTIES
+				+ "，此文件包含数据库连接的相关信息。");
 	}
 
 	/**
-	 * 
+	 * 将sql/install.sql导入数据库中
 	 */
 	private boolean importData() {
 		console.readLine("\n按control+c推出，按其它键继续安装。。。\n");

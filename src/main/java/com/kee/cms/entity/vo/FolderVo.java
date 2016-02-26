@@ -1,16 +1,14 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.entity.vo;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.kee.cms.entity.Folder;
-
+/**
+ * 
+ * @author keehang
+ *
+ */
 public class FolderVo extends Folder {
 
 	private List<FolderVo> folderList = new ArrayList<FolderVo>();

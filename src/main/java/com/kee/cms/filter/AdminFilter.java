@@ -1,8 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
 
 package com.kee.cms.filter;
 
@@ -26,7 +21,7 @@ import com.kee.cms.entity.Admin;
  * 
  * 管理过滤器
  * 
- * @author Herbert
+ * @author keehang
  * 
  */
 public class AdminFilter implements Filter {
@@ -34,7 +29,6 @@ public class AdminFilter implements Filter {
 	protected final Logger logger = Logger.getLogger(this.getClass());
 
 	public void init(FilterConfig filterConfig) throws ServletException {
-		// TODO Auto-generated method stub
 
 	}
 

@@ -1,9 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.dao;
 
 import java.util.List;
@@ -21,10 +15,6 @@ import com.kee.cms.entity.vo.CommentVo;
 @Repository
 public interface CommentDao {
 
-	// ///////////////////////////////
-	// ///// 增加 ////////
-	// ///////////////////////////////
-
 	/**
 	 * 添加评论
 	 * 
@@ -33,9 +23,7 @@ public interface CommentDao {
 	 */
 	public int addComment(Comment comment);
 
-	// ///////////////////////////////
-	// ///// 修改 ////////
-	// ///////////////////////////////
+	
 
 	/**
 	 * 评论审核
@@ -45,9 +33,7 @@ public interface CommentDao {
 	 */
 	public int updateCommentStatus(Comment comment);
 
-	// ///////////////////////////////
-	// ///// 查詢 ////////
-	// ///////////////////////////////
+	
 
 	/**
 	 * 获得所有评论

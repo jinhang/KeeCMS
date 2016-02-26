@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
-<!-- Changsha kee Network Technology Co., Ltd. All rights reserved. -->
-<!-- 长沙市师说网络科技有限公司 版权所有 -->
-<!-- http://www.kee.com -->
-
 <mapper namespace="com.kee.cms.dao.AttachmentDao">
-
-	<!-- ############################## -->
 	<!-- ###### 增加 ###### -->
-	<!-- ############################## -->
-
 	<insert id="addAttachment" parameterType="com.kee.cms.entity.Attachment">
 		insert into
 		attachment(kindId,name,description,path,size,type,link,kind,status,createTime)
@@ -20,20 +11,12 @@
 			LAST_INSERT_ID()
 		</selectKey>
 	</insert>
-
-	<!-- ############################## -->
 	<!-- ###### 删除 ###### -->
-	<!-- ############################## -->
-
 	<delete id="deleteAttachment" parameterType="long">
 		delete from
 		attachment where attachmentId=#{attachmentId}
 	</delete>
-
-	<!-- ############################## -->
 	<!-- ###### 修改 ###### -->
-	<!-- ############################## -->
-
 	<update id="updateStatusByAttachmentId">
 		update attachment
 		set
@@ -41,7 +24,6 @@
 		where
 		attachmentId=#{attachmentId}
 	</update>
-
 	<update id="updateLinkByAttachmentId">
 		update attachment
 		set
@@ -49,23 +31,17 @@
 		where
 		attachmentId=#{attachmentId}
 	</update>
-
-	<!-- ############################## -->
 	<!-- ###### 查询 ###### -->
-	<!-- ############################## -->
-
-	<select id="getAttachmentById" parameterType="long"
+		<select id="getAttachmentById" parameterType="long"
 		resultType="com.kee.cms.entity.Attachment">
 		select * from attachment where attachmentId=#{attachmentId}
 	</select>
-
 	<select id="getAttachmentCountByKindId" resultType="Integer">
 		select
 		count(*)
 		from attachment where kindId=#{kindId} and kind = #{kind} and
 		status = #{status}
 	</select>
-
 	<select id="getAttachmentListByKindId" resultType="com.kee.cms.entity.vo.AttachmentVo">
 		select *
 		from

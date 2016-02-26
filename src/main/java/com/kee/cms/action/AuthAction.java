@@ -1,9 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.action;
 
 import java.awt.image.BufferedImage;
@@ -28,12 +22,12 @@ import com.kee.cms.constant.SystemConstant;
 import com.kee.cms.entity.vo.JsonVo;
 import com.kee.cms.service.AdminService;
 import com.kee.cms.util.HttpUtils;
-
 /**
- * @author Herbert
- * 
+ * google验证码
+ * 登录操作
+ * @author keehang
+ *
  */
-
 @Controller
 @RequestMapping("/auth")
 public class AuthAction extends BaseAction {

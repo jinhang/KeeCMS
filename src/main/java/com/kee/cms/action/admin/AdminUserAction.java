@@ -1,8 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
 package com.kee.cms.action.admin;
 
 import org.springframework.stereotype.Controller;
@@ -14,12 +9,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.kee.cms.constant.UserConstant;
 import com.kee.cms.entity.vo.JsonVo;
-
 /**
- * 用户action
- * 
- * @author Administrator
- * 
+ * 用户操作
+ * @author keehang
+ * @version 1.0
  */
 @Controller
 @RequestMapping("/admin/user")

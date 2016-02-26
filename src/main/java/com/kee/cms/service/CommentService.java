@@ -1,9 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.service;
 
 import java.util.ArrayList;
@@ -23,7 +17,7 @@ import com.kee.cms.util.AuthUtils;
 /**
  * 评论服务
  * 
- * @author Administrator
+ * @author keehang
  * 
  */
 @Service
@@ -34,10 +28,6 @@ public class CommentService {
 
 	@Autowired
 	private UserService userService;
-
-	// ///////////////////////////////
-	// ///// 增加 ////////
-	// ///////////////////////////////
 
 	/**
 	 * 增加评论
@@ -70,11 +60,6 @@ public class CommentService {
 		return comment;
 
 	}
-
-	// ///////////////////////////////
-	// ///// 修改 ////////
-	// ///////////////////////////////
-
 	/**
 	 * 修改评论状态
 	 * 
@@ -87,11 +72,6 @@ public class CommentService {
 		comment.setStatus(status);
 		return commentDao.updateCommentStatus(comment);
 	}
-
-	// ///////////////////////////////
-	// ///// 查詢 ////////
-	// ///////////////////////////////
-
 	/**
 	 * 获得评论分页
 	 * 
@@ -134,7 +114,6 @@ public class CommentService {
 		}
 		return commentList;
 	}
-
 	/**
 	 * 通过id获得指定评论
 	 * 
@@ -144,7 +123,6 @@ public class CommentService {
 	public Comment getCommentById(long commentId) {
 		return commentDao.getCommentById(commentId);
 	}
-
 	/**
 	 * 获得所有评论
 	 * 
@@ -155,7 +133,6 @@ public class CommentService {
 	public List<CommentVo> getCommentList(long offset, long rows) {
 		return commentDao.getAllList(offset, rows);
 	}
-
 	/**
 	 * 获得所有评论的数量
 	 * 
@@ -164,7 +141,6 @@ public class CommentService {
 	public int getCommentListCount() {
 		return commentDao.getAllListCount();
 	}
-
 	/**
 	 * 获得所有评论的分页
 	 * 
@@ -193,7 +169,6 @@ public class CommentService {
 		pageVo.setList(list);
 		return pageVo;
 	}
-
 	/**
 	 * 获得某状态下的所有评论
 	 * 
@@ -206,7 +181,6 @@ public class CommentService {
 			CommentConstant.Status status) {
 		return commentDao.getCommentByStatus(offset, rows, status);
 	}
-
 	/**
 	 * 获得某状态下的评论的数量
 	 * 
@@ -216,7 +190,6 @@ public class CommentService {
 	public int getCommentByStatusCount(CommentConstant.Status status) {
 		return commentDao.getCommentByStatusCount(status);
 	}
-
 	// /**
 	// * 获得某状态下的评论的分页
 	// *

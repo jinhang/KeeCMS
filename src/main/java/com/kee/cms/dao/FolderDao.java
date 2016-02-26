@@ -1,9 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
-
 package com.kee.cms.dao;
 
 import java.util.List;
@@ -19,16 +13,14 @@ import com.kee.cms.entity.vo.FolderVo;
 /**
  * 目录服务
  * 
- * @author Harbored
+ * @author keehang
  * 
  */
 
 @Repository
 public interface FolderDao {
 
-	// ///////////////////////////////
-	// ///// 增加 ////////
-	// ///////////////////////////////
+
 	/**
 	 * 增加目录
 	 * 
@@ -36,9 +28,6 @@ public interface FolderDao {
 	 */
 	public int addFolder(Folder folder);
 
-	// ///////////////////////////////
-	// ///// 刪除 ////////
-	// ///////////////////////////////
 	/**
 	 * 删除目录
 	 * 
@@ -47,9 +36,7 @@ public interface FolderDao {
 	 */
 	public boolean deleteFolder(@Param("folderId") long folderId);
 
-	// ///////////////////////////////
-	// ///// 修改 ////////
-	// ///////////////////////////////
+	
 	/**
 	 * 更新目录
 	 * 

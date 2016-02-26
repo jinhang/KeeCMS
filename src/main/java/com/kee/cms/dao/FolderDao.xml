@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>  
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
-<!-- Changsha kee Network Technology Co., Ltd. All rights reserved. -->
-<!-- 长沙市师说网络科技有限公司 版权所有 -->
-<!-- http://www.kee.com -->
-
 <mapper namespace="com.kee.cms.dao.FolderDao">
-
-	<!-- ############################## -->
 	<!-- ###### 增加 ###### -->
-	<!-- ############################## -->
-
 	<insert id="addFolder" parameterType="com.kee.cms.entity.Folder">
 		insert into
 		folder(fatherId,ename,name,content,path,level,count,status,createTime,sort,rank,owner,type)
@@ -20,37 +11,26 @@
 			LAST_INSERT_ID()
 		</selectKey>
 	</insert>
-
-	<!-- ############################## -->
 	<!-- ###### 删除 ###### -->
-	<!-- ############################## -->
-
 	<delete id="deleteFolder" parameterType="long">
 		delete from folder where
 		folderId=#{folderId}
 	</delete>
-
-	<!-- ############################## -->
 	<!-- ###### 修改 ###### -->
-	<!-- ############################## -->
-
 	<update id="updateFolder" parameterType="com.kee.cms.entity.Folder">
 		update folder set
 		ename=#{ename},name=#{name},content=#{content}
 		where
 		folderId=#{folderId}
 	</update>
-
 	<update id="updateSort" parameterType="long">
 		update folder set
 		sort=#{sort} where folderId=#{folderId}
 	</update>
-
 	<update id="updatePath">
 		update folder set path=#{path} where
 		folderId=#{folderId}
 	</update>
-
 	<update id="updateType">
 		update folder set type=#{type} where
 		folderId=#{folderId}
@@ -65,16 +45,11 @@
 		update folder set count=#{count} where
 		folderId=#{folderId}
 	</update>
-
-	<!-- ############################## -->
 	<!-- ###### 查询 ###### -->
-	<!-- ############################## -->
-
 	<select id="getFolderById" resultType="com.kee.cms.entity.vo.FolderVo">
 		select * from folder where
 		folderId=#{folderId}
 	</select>
-
 	<select id="getFolderListByFatherId" resultType="com.kee.cms.entity.vo.FolderVo">
 		select * from folder where fatherId=#{fatherId}
 		<if test="status !=null">and status = #{status}</if>
@@ -85,7 +60,6 @@
 		select folder.path from
 		folder
 	</select>
-
 	<select id="getFolderByEnameAndFatherId" resultType="com.kee.cms.entity.vo.FolderVo">
 		select *
 		from folder where ename=#{ename} and fatherId = #{fatherId}

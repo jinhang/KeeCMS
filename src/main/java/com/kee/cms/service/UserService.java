@@ -1,8 +1,3 @@
-/*
- *	Copyright © 2013 Changsha kee Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.kee.com
- */
 
 package com.kee.cms.service;
 
@@ -20,7 +15,7 @@ import com.kee.cms.entity.vo.PageVo;
 /**
  * 用户服务
  * 
- * @author Zhangjiale
+ * @author keehang
  * 
  */
 @Service
@@ -29,9 +24,6 @@ public class UserService {
 	@Autowired
 	private UserDao userDao;
 
-	// ///////////////////////////////
-	// ///// 增加 ////////
-	// ///////////////////////////////
 
 	/**
 	 * 增加用户
@@ -49,9 +41,6 @@ public class UserService {
 		return user;
 	}
 
-	// ///////////////////////////////
-	// ///// 刪除 ////////
-	// ///////////////////////////////
 
 	/**
 	 * 删除用户
@@ -62,9 +51,6 @@ public class UserService {
 		return userDao.deleteUserById(userId);
 	}
 
-	// ///////////////////////////////
-	// ///// 修改 ////////
-	// ///////////////////////////////
 
 	/**
 	 * 更新用户数据
@@ -81,10 +67,6 @@ public class UserService {
 		userDao.updateUser(user);
 		return user;
 	}
-
-	// ///////////////////////////////
-	// ///// 查詢 ////////
-	// ///////////////////////////////
 
 	/**
 	 * 根据Id得到用户信息
