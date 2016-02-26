@@ -8,9 +8,9 @@
 * 支持4级目录
 * 初始化后台登录用户
 
-**前台：** http://42.121.56.21:8080/index.htm
+**前台：** http://localhost:8080/index.htm
 
-**后台：** http://42.121.56.21:8080/auth/admin/login.htm
+**后台：** http://localhost:8080/auth/admin/login.htm
 
 ## 技术
 * jQuery
@@ -53,7 +53,7 @@
 
 >	# 后台地址
 
->	http://127.0.0.1:8080/auth/admin/login.htm
+>	http://localhost:8080/auth/admin/login.htm
 
 >	登录邮箱：***@***.com
 >	登录密码：***
